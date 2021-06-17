@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ServiceType;
+namespace Benefia\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;

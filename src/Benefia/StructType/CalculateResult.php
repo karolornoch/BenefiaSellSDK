@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace StructType;
+namespace Benefia\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
 /**
- * This class stands for MakePaymentResult StructType
+ * This class stands for CalculateResult StructType
  * @subpackage Structs
  */
-class MakePaymentResult extends AbstractStructBase
+class CalculateResult extends AbstractStructBase
 {
     /**
      * The any
@@ -19,8 +19,8 @@ class MakePaymentResult extends AbstractStructBase
      */
     protected $any = null;
     /**
-     * Constructor method for MakePaymentResult
-     * @uses MakePaymentResult::setAny()
+     * Constructor method for CalculateResult
+     * @uses CalculateResult::setAny()
      * @param \DOMDocument|string|null $any
      */
     public function __construct($any = null)
@@ -49,7 +49,7 @@ class MakePaymentResult extends AbstractStructBase
      * @uses \DOMDocument::saveXML()
      * @uses \DOMNode::item()
      * @param \DOMDocument|string|null $any
-     * @return \StructType\MakePaymentResult
+     * @return \StructType\CalculateResult
      */
     public function setAny($any = null): self
     {

@@ -2,33 +2,33 @@
 
 declare(strict_types=1);
 
-namespace ServiceType;
+namespace Benefia\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
 /**
- * This class stands for Calculate ServiceType
+ * This class stands for Sale ServiceType
  * @subpackage Services
  */
-class Calculate extends AbstractSoapClientBase
+class Sale extends AbstractSoapClientBase
 {
     /**
-     * Method to call the operation originally named Calculate
+     * Method to call the operation originally named Sale
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\Calculate $parameters
-     * @return \StructType\CalculateResponse|bool
+     * @param \StructType\Sale $parameters
+     * @return \StructType\SaleResponse|bool
      */
-    public function Calculate(\StructType\Calculate $parameters)
+    public function Sale(\StructType\Sale $parameters)
     {
         try {
-            $this->setResult($resultCalculate = $this->getSoapClient()->__soapCall('Calculate', [
+            $this->setResult($resultSale = $this->getSoapClient()->__soapCall('Sale', [
                 $parameters,
             ], [], [], $this->outputHeaders));
         
-            return $resultCalculate;
+            return $resultSale;
         } catch (SoapFault $soapFault) {
             $this->saveLastError(__METHOD__, $soapFault);
         
@@ -38,7 +38,7 @@ class Calculate extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\CalculateResponse
+     * @return \StructType\SaleResponse
      */
     public function getResult()
     {

@@ -14,16 +14,16 @@ class ClassMap
     final public static function get(): array
     {
         return [
-            'Calculate' => '\\StructType\\Calculate',
-            'wellFormedXmlInstance' => '\\StructType\\WellFormedXmlInstance',
-            'CalculateResponse' => '\\StructType\\CalculateResponse',
-            'CalculateResult' => '\\StructType\\CalculateResult',
-            'Sale' => '\\StructType\\Sale',
-            'SaleResponse' => '\\StructType\\SaleResponse',
-            'SaleResult' => '\\StructType\\SaleResult',
-            'MakePayment' => '\\StructType\\MakePayment',
-            'MakePaymentResponse' => '\\StructType\\MakePaymentResponse',
-            'MakePaymentResult' => '\\StructType\\MakePaymentResult',
+            'Calculate' => '\\Benefia\\StructType\\Calculate',
+            'wellFormedXmlInstance' => '\\Benefia\\StructType\\WellFormedXmlInstance',
+            'CalculateResponse' => '\\Benefia\\StructType\\CalculateResponse',
+            'CalculateResult' => '\\Benefia\\StructType\\CalculateResult',
+            'Sale' => '\\Benefia\\StructType\\Sale',
+            'SaleResponse' => '\\Benefia\\StructType\\SaleResponse',
+            'SaleResult' => '\\Benefia\\StructType\\SaleResult',
+            'MakePayment' => '\\Benefia\\StructType\\MakePayment',
+            'MakePaymentResponse' => '\\Benefia\\StructType\\MakePaymentResponse',
+            'MakePaymentResult' => '\\Benefia\\StructType\\MakePaymentResult',
         ];
     }
 }
