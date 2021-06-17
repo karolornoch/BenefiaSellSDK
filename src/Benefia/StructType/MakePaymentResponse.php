@@ -6,6 +6,7 @@ namespace Benefia\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
+use Benefia\StructType\MakePaymentResult;
 
 /**
  * This class stands for MakePaymentResponse StructType
@@ -20,13 +21,13 @@ class MakePaymentResponse extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\MakePaymentResult|null
      */
-    protected ?\StructType\MakePaymentResult $MakePaymentResult = null;
+    protected ?MakePaymentResult $MakePaymentResult = null;
     /**
      * Constructor method for MakePaymentResponse
      * @uses MakePaymentResponse::setMakePaymentResult()
      * @param \StructType\MakePaymentResult $makePaymentResult
      */
-    public function __construct(?\StructType\MakePaymentResult $makePaymentResult = null)
+    public function __construct(?MakePaymentResult $makePaymentResult = null)
     {
         $this
             ->setMakePaymentResult($makePaymentResult);
@@ -35,7 +36,7 @@ class MakePaymentResponse extends AbstractStructBase
      * Get MakePaymentResult value
      * @return \StructType\MakePaymentResult|null
      */
-    public function getMakePaymentResult(): ?\StructType\MakePaymentResult
+    public function getMakePaymentResult(): ?MakePaymentResult
     {
         return $this->MakePaymentResult;
     }
@@ -44,7 +45,7 @@ class MakePaymentResponse extends AbstractStructBase
      * @param \StructType\MakePaymentResult $makePaymentResult
      * @return \StructType\MakePaymentResponse
      */
-    public function setMakePaymentResult(?\StructType\MakePaymentResult $makePaymentResult = null): self
+    public function setMakePaymentResult(?MakePaymentResult $makePaymentResult = null): self
     {
         $this->MakePaymentResult = $makePaymentResult;
         

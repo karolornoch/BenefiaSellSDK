@@ -6,6 +6,7 @@ namespace Benefia\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
+use Benefia\StructType\WellFormedXmlInstance;
 
 /**
  * This class stands for Calculate StructType
@@ -20,13 +21,13 @@ class Calculate extends AbstractStructBase
      * - minOccurs: 0
      * @var \StructType\WellFormedXmlInstance|null
      */
-    protected ?\StructType\WellFormedXmlInstance $wellFormedXmlInstance = null;
+    protected ?WellFormedXmlInstance $wellFormedXmlInstance = null;
     /**
      * Constructor method for Calculate
      * @uses Calculate::setWellFormedXmlInstance()
      * @param \StructType\WellFormedXmlInstance $wellFormedXmlInstance
      */
-    public function __construct(?\StructType\WellFormedXmlInstance $wellFormedXmlInstance = null)
+    public function __construct(?WellFormedXmlInstance $wellFormedXmlInstance = null)
     {
         $this
             ->setWellFormedXmlInstance($wellFormedXmlInstance);
@@ -35,7 +36,7 @@ class Calculate extends AbstractStructBase
      * Get wellFormedXmlInstance value
      * @return \StructType\WellFormedXmlInstance|null
      */
-    public function getWellFormedXmlInstance(): ?\StructType\WellFormedXmlInstance
+    public function getWellFormedXmlInstance(): ?WellFormedXmlInstance
     {
         return $this->wellFormedXmlInstance;
     }
@@ -44,7 +45,7 @@ class Calculate extends AbstractStructBase
      * @param \StructType\WellFormedXmlInstance $wellFormedXmlInstance
      * @return \StructType\Calculate
      */
-    public function setWellFormedXmlInstance(?\StructType\WellFormedXmlInstance $wellFormedXmlInstance = null): self
+    public function setWellFormedXmlInstance(?WellFormedXmlInstance $wellFormedXmlInstance = null): self
     {
         $this->wellFormedXmlInstance = $wellFormedXmlInstance;
         

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Benefia\ServiceType;
 
+use Benefia\StructType\Calculate as StructTypeCalculate;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -18,10 +19,10 @@ class Calculate extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\Calculate $parameters
-     * @return \StructType\CalculateResponse|bool
+     * @param Calculate $parameters
+     * @return CalculateResponse|bool
      */
-    public function Calculate(\StructType\Calculate $parameters)
+    public function Calculate(StructTypeCalculate $parameters)
     {
         try {
             $this->setResult($resultCalculate = $this->getSoapClient()->__soapCall('Calculate', [
@@ -38,7 +39,7 @@ class Calculate extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\CalculateResponse
+     * @return CalculateResponse
      */
     public function getResult()
     {

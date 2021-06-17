@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Benefia\ServiceType;
 
+use Benefia\StructType\Sale as StructTypeSale;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -18,10 +19,10 @@ class Sale extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\Sale $parameters
-     * @return \StructType\SaleResponse|bool
+     * @param Sale $parameters
+     * @return SaleResponse|bool
      */
-    public function Sale(\StructType\Sale $parameters)
+    public function Sale(StructTypeSale $parameters)
     {
         try {
             $this->setResult($resultSale = $this->getSoapClient()->__soapCall('Sale', [
@@ -38,7 +39,7 @@ class Sale extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\SaleResponse
+     * @return SaleResponse
      */
     public function getResult()
     {

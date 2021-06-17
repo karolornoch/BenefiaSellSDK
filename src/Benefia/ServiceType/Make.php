@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Benefia\ServiceType;
 
+use Benefia\StructType\MakePayment;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -23,10 +24,10 @@ class Make extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\MakePayment $parameters
-     * @return \StructType\MakePaymentResponse|bool
+     * @param MakePayment $parameters
+     * @return MakePaymentResponse|bool
      */
-    public function MakePayment(\StructType\MakePayment $parameters)
+    public function MakePayment(MakePayment $parameters)
     {
         try {
             $this->setResult($resultMakePayment = $this->getSoapClient()->__soapCall('MakePayment', [
@@ -43,7 +44,7 @@ class Make extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\MakePaymentResponse
+     * @return MakePaymentResponse
      */
     public function getResult()
     {
