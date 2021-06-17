@@ -6,6 +6,7 @@ namespace Benefia\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
+use Benefia\StructType\CalculateResult;
 
 /**
  * This class stands for CalculateResponse StructType
@@ -18,24 +19,24 @@ class CalculateResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\CalculateResult|null
+     * @var CalculateResult|null
      */
-    protected ?\StructType\CalculateResult $CalculateResult = null;
+    protected ?CalculateResult $CalculateResult = null;
     /**
      * Constructor method for CalculateResponse
      * @uses CalculateResponse::setCalculateResult()
-     * @param \StructType\CalculateResult $calculateResult
+     * @param CalculateResult $calculateResult
      */
-    public function __construct(?\StructType\CalculateResult $calculateResult = null)
+    public function __construct(?CalculateResult $calculateResult = null)
     {
         $this
             ->setCalculateResult($calculateResult);
     }
     /**
      * Get CalculateResult value
-     * @return \StructType\CalculateResult|null
+     * @return CalculateResult|null
      */
-    public function getCalculateResult(): ?\StructType\CalculateResult
+    public function getCalculateResult(): ?CalculateResult
     {
         return $this->CalculateResult;
     }
@@ -44,7 +45,7 @@ class CalculateResponse extends AbstractStructBase
      * @param \StructType\CalculateResult $calculateResult
      * @return \StructType\CalculateResponse
      */
-    public function setCalculateResult(?\StructType\CalculateResult $calculateResult = null): self
+    public function setCalculateResult(?CalculateResult $calculateResult = null): self
     {
         $this->CalculateResult = $calculateResult;
         
